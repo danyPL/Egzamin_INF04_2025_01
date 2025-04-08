@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INF_04_2025_01_Mobile.MainPage"
+             Title="Odtwarzacz muzyki">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20,0"
+            VerticalOptions="Center"
+            Spacing="20">
+            <Image x:Name="Image" WidthRequest="300"/>
+                <Label Text="Mortals" x:Name="Title" FontSize="Title" HorizontalTextAlignment="Center"/>
+                <Label Text="Autor" x:Name="Author" HorizontalTextAlignment="Center"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label FontSize="Medium" Text="0:00" Grid.Column="0" HorizontalOptions="Center"/>
+                <Slider Grid.Column="1"/>
+                <Label FontSize="Medium" Text="3:47" Grid.Column="2" HorizontalOptions="Center" x:Name="EndTime"/>
+            </Grid>
+            <Grid ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    x:Name="BackButton"
+                    Background="LightBlue"
+                    ImageSource="rewind.png"
+                    Grid.Column="0"
+                    Clicked="Back"
+                    HorizontalOptions="Center"
+                    />
+                <Button
+                    x:Name="PlayButton"
+                    Background="LightBlue"
+                ImageSource="play.png"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                    />
+                <Button
+                    x:Name="NextButton"
+                    Background="LightBlue"
+                    ImageSource="forward.png"
+                    Grid.Column="2"
+                    HorizontalOptions="Center"
+                    Clicked="Next"
+                    />
+            </Grid>
+        </VerticalStackLayout>
+        
+    </ScrollView>
+
+</ContentPage>
